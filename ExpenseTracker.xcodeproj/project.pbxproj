@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850BE8302C59D2FF001EB1A0 /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BE82F2C59D2FF001EB1A0 /* TransactionList.swift */; };
 		853E019E2C5180B0000D643C /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853E019D2C5180B0000D643C /* Extentions.swift */; };
 		85911DB92C518C8800E8DB99 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85911DB82C518C8800E8DB99 /* TransactionModel.swift */; };
 		85911DBB2C518D9400E8DB99 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85911DBA2C518D9400E8DB99 /* PreviewData.swift */; };
 		85911DBD2C5192F900E8DB99 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85911DBC2C5192F900E8DB99 /* TransactionRow.swift */; };
 		85911DC02C51A78700E8DB99 /* SwiftUIFontIcon in Frameworks */ = {isa = PBXBuildFile; productRef = 85911DBF2C51A78700E8DB99 /* SwiftUIFontIcon */; };
 		85911DC32C5207F000E8DB99 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85911DC22C5207F000E8DB99 /* TransactionListViewModel.swift */; };
+		85911DC52C52923900E8DB99 /* RecentTransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85911DC42C52923900E8DB99 /* RecentTransactionList.swift */; };
 		85D2BC862C50970C00418E4A /* ExpenseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D2BC852C50970C00418E4A /* ExpenseTrackerApp.swift */; };
 		85D2BC882C50970C00418E4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D2BC872C50970C00418E4A /* ContentView.swift */; };
 		85D2BC8A2C50970D00418E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D2BC892C50970D00418E4A /* Assets.xcassets */; };
@@ -20,11 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		850BE82F2C59D2FF001EB1A0 /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
 		853E019D2C5180B0000D643C /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		85911DB82C518C8800E8DB99 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		85911DBA2C518D9400E8DB99 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		85911DBC2C5192F900E8DB99 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 		85911DC22C5207F000E8DB99 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		85911DC42C52923900E8DB99 /* RecentTransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionList.swift; sourceTree = "<group>"; };
 		85D2BC822C50970C00418E4A /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D2BC852C50970C00418E4A /* ExpenseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerApp.swift; sourceTree = "<group>"; };
 		85D2BC872C50970C00418E4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 			children = (
 				85D2BC852C50970C00418E4A /* ExpenseTrackerApp.swift */,
 				85D2BC872C50970C00418E4A /* ContentView.swift */,
+				85911DC42C52923900E8DB99 /* RecentTransactionList.swift */,
+				850BE82F2C59D2FF001EB1A0 /* TransactionList.swift */,
 				85911DBC2C5192F900E8DB99 /* TransactionRow.swift */,
 				85911DC22C5207F000E8DB99 /* TransactionListViewModel.swift */,
 				853E019D2C5180B0000D643C /* Extentions.swift */,
@@ -161,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				85911DBB2C518D9400E8DB99 /* PreviewData.swift in Sources */,
+				850BE8302C59D2FF001EB1A0 /* TransactionList.swift in Sources */,
+				85911DC52C52923900E8DB99 /* RecentTransactionList.swift in Sources */,
 				85911DB92C518C8800E8DB99 /* TransactionModel.swift in Sources */,
 				85D2BC882C50970C00418E4A /* ContentView.swift in Sources */,
 				85911DBD2C5192F900E8DB99 /* TransactionRow.swift in Sources */,

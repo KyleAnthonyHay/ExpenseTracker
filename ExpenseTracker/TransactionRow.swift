@@ -18,7 +18,7 @@ struct TransactionRow: View {
                 .fill(Color.Colors.icon.opacity(0.3))
                 .frame(width: 44, height: 44)
                 .overlay {
-                    FontIcon.text(.awesome5Solid(code: .icons), fontsize: 24, color: Color.Colors.icon)
+                    FontIcon.text(.awesome5Solid(code: transaction.icon), fontsize: 24, color: Color.Colors.icon)
                 }
             
             VStack(alignment: .leading, spacing: 6, content: {
@@ -42,7 +42,7 @@ struct TransactionRow: View {
             //MARK: Transaction Amount
             Text(transaction.signedAmount, format: .currency(code: "USD"))
                 .bold()
-                .foregroundStyle(transaction.type == TransactionType.credit.rawValue ? Color.text : .primary)
+                .foregroundStyle(transaction.type == TransactionType.credit.rawValue ? Color.Colors.text : .primary)
         })
         .padding([.top, .bottom], 8)
     }

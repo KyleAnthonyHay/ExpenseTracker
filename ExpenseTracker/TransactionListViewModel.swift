@@ -8,6 +8,9 @@
 import Foundation
 import Combine
 
+
+typealias TransactionGroup = [String: [Transaction]] // Dictionarye
+
 final class TransactionListViewModel: ObservableObject, Observable {
     @Published var transactions: [Transaction] = []
     
@@ -15,7 +18,6 @@ final class TransactionListViewModel: ObservableObject, Observable {
     
     init() {
         getTransactions()
-        
     }
     
     func getTransactions() {
@@ -44,9 +46,17 @@ final class TransactionListViewModel: ObservableObject, Observable {
                 }
             }, receiveValue: { [weak self] result in
                 self?.transactions = result
-                    dump(self?.transactions as Any) //for testing
+//                    dump(self?.transactions as Any) //for testing
             })
             .store(in: &cancellables)
 
+    }
+    
+    func groupTransactionsByMonth() -> TransactionGroup {
+        guard !transactions.isEmpty else {return [:] }
+        // group transactions by month and store in new dictionary
+        let groupedTransactions = TransactionGroup(grouping: transactions, by: {$0.month})
+        
+        return groupedTransactions
     }
 }

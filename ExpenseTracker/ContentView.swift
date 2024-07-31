@@ -9,13 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack (alignment: .leading, spacing: 24, content: {
                     // MARK: Title
-                    /*@START_MENU_TOKEN@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
+                    Text("Overview")
                         .font(.title2)
                         .bold()
+                    
+                    // MARK: Transaction List
+                    RecentTransactionList()
                 })
                 .padding()
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
@@ -39,5 +42,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView().environmentObject(RecentTransactionList_Previews.transactionListVM)
 }
