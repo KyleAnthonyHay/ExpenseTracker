@@ -15,7 +15,6 @@ final class TransactionListViewModel: ObservableObject, Observable {
     
     init() {
         getTransactions()
-        
     }
     
     func getTransactions() {
@@ -44,7 +43,7 @@ final class TransactionListViewModel: ObservableObject, Observable {
                 }
             }, receiveValue: { [weak self] result in
                 self?.transactions = result
-                    dump(self?.transactions as Any) //for testing
+//                    dump(self?.transactions as Any) //for testing
             })
             .store(in: &cancellables)
 
