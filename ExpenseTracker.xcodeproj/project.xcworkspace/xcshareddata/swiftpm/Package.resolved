@@ -1,0 +1,15 @@
+{
+  "originHash" : "7dfeb4254e4292c1330f3f39247e5e6b3157114eeacf1fcfd240681bab796418",
+  "pins" : [
+    {
+      "identity" : "swiftuifonticon",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/huybuidac/SwiftUIFontIcon",
+      "state" : {
+        "branch" : "master",
+        "revision" : "4f170fbf443d985ae518a14a12ec8194ec6b08eb"
+      }
+    }
+  ],
+  "version" : 3
+}
