@@ -44,4 +44,4 @@ struct ContentView: View {
 #Preview {
     ContentView().environmentObject(RecentTransactionList_Previews.transactionListVM)
 }
-//
+///
