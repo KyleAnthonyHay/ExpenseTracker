@@ -27,6 +27,7 @@ struct TransactionRow: View {
                     .font(.subheadline)
                     .bold()
                     .lineLimit(1)
+//                    .foregroundStyle(.)
                 //MARK: Transaction Category
                 Text(transaction.category)
                     .font(.footnote)

@@ -19,7 +19,15 @@ struct TransactionList: View {
                     Section {
                         // MARK: Transaction List
                         ForEach(transactions) { transaction in
-                        TransactionRow(transaction: transaction)}
+                            NavigationLink {
+                                TransactionView(transaction: transaction)
+                            } label: {
+                                TransactionRow(transaction: transaction)
+                            }
+
+                            
+                            
+                        }
                     } header: {
                         // MARK: Transaction Month
                         Text(month)

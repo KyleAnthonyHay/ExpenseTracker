@@ -34,7 +34,14 @@ struct RecentTransactionList: View {
                 
                 // MARK: Recent Transactions List
                 ForEach(Array(transactionListVM.transactions.prefix(transactionsPreviewNumber).enumerated()), id: \.element) { index, transaction in
-                    TransactionRow(transaction: transaction)
+                    NavigationLink {
+                        TransactionView(transaction: transaction)
+                    } label: {
+                        TransactionRow(transaction: transaction)
+                            .accentColor(Color.Colors.textSet)
+                    }
+
+                    
 
                     Divider()
                         .opacity(index == transactionsPreviewNumber - 1 ? 0 : 1)
@@ -64,6 +71,8 @@ struct RecentTransactionList_Previews: PreviewProvider {
 }
 
 #Preview {
-    RecentTransactionList()
-           .environmentObject(RecentTransactionList_Previews.transactionListVM)
+    NavigationStack {
+        RecentTransactionList()
+            .environmentObject(RecentTransactionList_Previews.transactionListVM)
+    }
 }
