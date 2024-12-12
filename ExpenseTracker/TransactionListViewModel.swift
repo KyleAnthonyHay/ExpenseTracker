@@ -85,4 +85,15 @@ final class TransactionListViewModel: ObservableObject, Observable {
         
         return cumulativeSum
     }
+    
+    func updateCategory(transaction: Transaction, category: Category) {
+        guard transaction.categoryId != category.id else { return }
+        
+        if let index = transactions.firstIndex(where: { $0.id == transaction.id }) {
+            var updatedTransaction = transactions[index]
+            updatedTransaction.categoryId = category.id
+            updatedTransaction.isEdited = true
+            transactions[index] = updatedTransaction
+        }
+    }
 }

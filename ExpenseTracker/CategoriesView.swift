@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CategoriesView: View {
     var transaction: Transaction
+    @EnvironmentObject var transactionListVM: TransactionListViewModel
     
     var body: some View {
         List {
@@ -18,13 +19,17 @@ struct CategoriesView: View {
                     ForEach(category.subCategorires ?? []) {subCategory in
                         let isSelected = transaction.categoryId == subCategory.id
                         
-                        CategoryRow(category: subCategory, isSelected: isSelected)
+                        CategoryRow(category: subCategory, isSelected: isSelected).onTapGesture {
+                            transactionListVM.updateCategory(transaction: transaction, category: subCategory)
+                        }
                     }
                 } header: {
                     // MARK: Categories
                     let isSelected = transaction.categoryId == category.id
                     
-                    CategoryRow(category: category, isSelected: isSelected)
+                    CategoryRow(category: category, isSelected: isSelected).onTapGesture {
+                        transactionListVM.updateCategory(transaction: transaction, category: category)
+                    }
                 }
 
             }
@@ -35,5 +40,5 @@ struct CategoriesView: View {
 }
 
 #Preview {
-    CategoriesView(transaction: transactionPreviewData)
+    CategoriesView(transaction: transactionPreviewData).environmentObject(TransactionListViewModel())
 }
