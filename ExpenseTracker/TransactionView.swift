@@ -37,7 +37,7 @@ struct TransactionView: View {
             NavigationLink {
                 CategoriesView(transaction: transaction)
             } label: {
-                TransactionDetialRow(icon: .list, title: "Category", text: transaction.category)
+                TransactionDetialRow(icon: .list, title: "Category", text: transaction.categoryItem.name)
             }
 
         }
