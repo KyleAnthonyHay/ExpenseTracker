@@ -33,7 +33,7 @@ struct RecentTransactionList: View {
                 }.padding(.top)
                 
                 // MARK: Recent Transactions List
-                ForEach(Array(transactionListVM.transactions.prefix(transactionsPreviewNumber).enumerated()), id: \.element) { index, transaction in
+                ForEach(Array(transactionListVM.transactions.prefix(transactionsPreviewNumber).enumerated()), id: \.offset) { index, transaction in
                     NavigationLink {
                         TransactionView(transaction: transaction)
                     } label: {
