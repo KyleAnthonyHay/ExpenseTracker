@@ -31,15 +31,15 @@ struct CategoryRow: View {
             } else {
                 Text(category.name).font(.subheadline)
             }
-            
+            Spacer()
             // MARK: Checkmark
             if isSelected {
-                Spacer()
+                
                 Image(systemName: "checkmark.circle.fill")
                     .font(.system(size: 16))
                     .foregroundColor(Color.Colors.icon)
             }
-        }
+        }.contentShape(Rectangle())
     }
 }
 
